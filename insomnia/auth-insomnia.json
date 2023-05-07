@@ -1,0 +1,109 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2023-05-07T12:00:00.000Z",
+  "__export_source": "Insomnia v2022.4.2",
+  "resources": [
+    {
+      "_id": "auth-login",
+      "name": "Auth Login",
+      "description": "",
+      "method": "POST",
+      "url": "{{baseUrl}}/api/v1/auth/login",
+      "body": {
+        "mode": "urlencoded",
+        "urlencoded": [
+          {
+            "key": "email",
+            "value": "test@example.com",
+            "type": "text"
+          },
+          {
+            "key": "password",
+            "value": "password",
+            "type": "text"
+          }
+        ]
+      },
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "noauth"
+      },
+      "metaSortKey": -1
+    },
+    {
+      "_id": "auth-register",
+      "name": "Auth Register",
+      "description": "",
+      "method": "POST",
+      "url": "{{baseUrl}}/api/v1/auth/register",
+      "body": {
+        "mode": "urlencoded",
+        "urlencoded": [
+          {
+            "key": "name",
+            "value": "Test User",
+            "type": "text"
+          },
+          {
+            "key": "email",
+            "value": "test@example.com",
+            "type": "text"
+          },
+          {
+            "key": "password",
+            "value": "password",
+            "type": "text"
+          },
+          {
+            "key": "password_confirmation",
+            "value": "password",
+            "type": "text"
+          }
+        ]
+      },
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "noauth"
+      },
+      "metaSortKey": -2
+    },
+    {
+      "_id": "auth-logout",
+      "name": "Auth Logout",
+      "description": "",
+      "method": "POST",
+      "url": "{{baseUrl}}/api/v1/auth/logout",
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{authToken}}"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "{{authToken}}"
+          }
+        ]
+      },
+      "metaSortKey": -3
+    }
+  ]
+}
